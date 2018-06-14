@@ -1,14 +1,5 @@
-// Write a function splitAndMerge
+// 1) Write a function splitAndMerge
 
-// Function accept 2 parameters:str and sp. str is a sentence. sp is a char as separator. 
-// First we need to divide the sentence into words(Use separator space); 
-// and then divide each word into characters(Use separator empty string); 
-// and then merge each characters with the specified sp; at last merge all the words(Use separator space) and return it.
-
-// Example:
-
-// splitAndMerge("My name is John"," ") should return "M y n a m e i s J o h n"
-// splitAndMerge("Hello World!",",") should return "H,e,l,l,o W,o,r,l,d,!"
 
 function splitAndMerge(str, sp) {
     let a = str.split(' ')
@@ -21,3 +12,41 @@ function splitAndMerge(str, sp) {
     }
     return arr.join(sp);
 }
+
+// 2) Write a function convert
+
+
+function convert(obj) {
+    console.log(Object.entries(obj));
+}
+
+convert({ name: 'Jeremy', age: 24, role: 'Software Engineer' });
+
+
+
+// 4) Write a function that takes a sentence (string) and reverses each word in the sentence.
+
+function reverseSentence(str) {
+
+    return str.split(' ')
+        .map(str => str.split('').reverse().join(''))
+        .join(' ');
+}
+console.log(reverseSentence('A fun little challenge!'));
+
+
+// 5) Write a function stringExpansion
+
+
+function stringExpansion(str) {
+    return str.replace(/([0-9]{1}[a-zA-Z]{1})/g,
+        str => {
+            if (str.length > 1)
+                return str[1].padEnd(str[0], str[1]);
+            else
+                return str;
+        }
+    ).replace(/\d+/g, '');
+}
+
+console.log(stringExpansion('5r52jsm2w'));
