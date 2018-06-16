@@ -65,7 +65,3 @@ function stringExpansion(str) {
 }
 
 console.log(stringExpansion('5r52jsm2w'));
-
-
-let a = 1;
-return a++;
