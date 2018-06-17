@@ -2,16 +2,12 @@
 
 
 function splitAndMerge(str, sp) {
-    let a = str.split(' ')
-        .map(str => str.split(''));
-    let arr = [];
-    for (let i = 0; i < a.length; i++) {
-        for (let j = 0; j < a[i].length; j++) {
-            arr.push(a[i][j]);
-        }
-    }
-    return arr.join(sp);
+    return str.split(' ')
+        .map(str => str.split(''))
+        .map(str => str.join(sp))
+        .join(sp);
 }
+splitAndMerge("My name is John", " ");
 
 // 2) Write a function convert
 
