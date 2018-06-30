@@ -5,9 +5,10 @@ function splitAndMerge(str, sp) {
     return str.split(' ')
         .map(str => str.split(''))
         .map(str => str.join(sp))
-        .join(sp);
+        .join(' ');
 }
 splitAndMerge("My name is John", " ");
+splitAndMerge("Hello World!", ",")
 
 // 2) Write a function convert
 
